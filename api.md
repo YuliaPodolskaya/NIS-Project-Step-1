@@ -263,8 +263,11 @@ print("done")
 	"archive": "(здесь .zip-файл представленный base64 строкой)"
 }
 ```
+
 </br>
+
 Пример отправки и декодирования на Python 3.6:
+
 ```python
 import requests
 import json
