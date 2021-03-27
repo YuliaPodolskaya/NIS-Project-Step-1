@@ -149,8 +149,9 @@ print(response)
 Формат JSON:
 ```json
 {
-	"terminal" : "1"
+	"terminal" : "1",
 	"queryNumber" : "(полученный номер запроса)"
+
 }
 ```
 
