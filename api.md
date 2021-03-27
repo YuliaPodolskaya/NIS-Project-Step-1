@@ -2,7 +2,7 @@
 
 Все запросы и ответы работают в формате JSON.
 
-- [Загрузка фотографии](## Загрузка фотографии)
+- [Загрузка фотографии](#Загрузка-фотографии)
 - Проверка фотографии
 - Проверка готовности архива
 - Скачивание архива
@@ -28,8 +28,8 @@ JSON содержит два поля «terminal» (номера термина�
 Пример JSON: 
 ```json
 {
-    "terminal" : "1",
-    "file": "(здесь находится base64 string представление изображения)"
+	"terminal" : "1",
+	"file": "(здесь находится base64 string представление изображения)"
 }
 ```
 
@@ -44,11 +44,11 @@ url = "http://192.168.0.10/upload"
 path_to_image = "home/files/image.jpg"
 
 with open(path_to_image, "rb") as image_file:
-    encoded_string = base64.b64encode(image_file.read())
+	encoded_string = base64.b64encode(image_file.read())
 
 data = {
-    "terminal": "1",
-    "file": str(encoded_string)[2:len(encoded_string) - 1]
+	"terminal": "1",
+	"file": str(encoded_string)[2:len(encoded_string) - 1]
 }
 
 json_data = json.dumps(data)
@@ -65,13 +65,13 @@ print(response)
 При успешной загрузке фотографии: 
 ```json
 {
-    "status" : "done"
+	"status" : "done"
 }
 ```
 При провале:
 ```json
 {
-    "status" : "fail"
+	"status" : "fail"
 }
 ```
 
@@ -84,8 +84,8 @@ JSON содержит два поля «terminal» (номера термина�
 Пример JSON: 
 ```json
 {
-    "terminal" : "1",
-    "file": "(здесь находится base64 string представление изображения)"
+	"terminal" : "1",
+	"file": "(здесь находится base64 string представление изображения)"
 }
 ```
 
@@ -100,11 +100,11 @@ url = "http://192.168.0.10/check"
 path_to_image = "home/files/image.jpg"
 
 with open(path_to_image, "rb") as image_file:
-    encoded_string = base64.b64encode(image_file.read())
+	encoded_string = base64.b64encode(image_file.read())
 
 data = {
-    "terminal": "1",
-    "file": str(encoded_string)[2:len(encoded_string) - 1]
+	"terminal": "1",
+	"file": str(encoded_string)[2:len(encoded_string) - 1]
 }
 
 json_data = json.dumps(data)
@@ -122,15 +122,15 @@ print(response)
  При успешной:
  ```json
 {
-    "status" : "done",
-    "id" : (здесь номер запроса)
+	"status" : "done",
+	"id" : (здесь номер запроса)
 }
 ```
 
 При провале:
 ```json
 {
-    "status": "fail"
+	"status": "fail"
 }
 ```
 
@@ -143,8 +143,8 @@ print(response)
 Формат JSON:
 ```json
 {
-    "terminal" : "1"
-    "queryNumber" : (полученный номер запроса)
+	"terminal" : "1"
+	"queryNumber" : (полученный номер запроса)
 }
 ```
 
@@ -158,8 +158,8 @@ import base64
 url = "http://192.168.0.10/checknumber"
 
 data = {
-    "terminal": "1",
-    "queryNumber" : "0" 
+	"terminal": "1",
+	"queryNumber" : "0" 
 
 }
 
@@ -180,17 +180,17 @@ print(response)
 Пример запроса:
 ```json
 {
-    "terminal": "1",
-    "queryNumber" : (номер запроса)
+	"terminal": "1",
+	"queryNumber" : (номер запроса)
 }
 ```
 
 Пример ответа:
 ```json
 {
-    "terminal": "1",
-    "queryNumber": "0",
-    "archive": (здесь .zip-файл представленный base64 строкой)
+	"terminal": "1",
+	"queryNumber": "0",
+	"archive": (здесь .zip-файл представленный base64 строкой)
 }
 ```
 Пример отправки и декодирования на Python 3.6:
@@ -202,8 +202,8 @@ import base64
 url = "http://192.168.0.10/downloadarchive"
 
 data = {
-    "terminal": "1",
-    "queryNumber": "0" 
+	"terminal": "1",
+	"queryNumber": "0" 
 }
 
 json_data = json.dumps(data)
@@ -218,7 +218,7 @@ print(response)
 decoded = base64.b64decode(response["archive"])
 
 with open("your_path_and_name_of_zip.zip", "wb") as f:
-    f.write(decoded)
+	f.write(decoded)
 
 print("done")
 ```
@@ -230,17 +230,17 @@ print("done")
 Пример запроса:
 ```json
 {
-    "terminal": "1",
-    "queryNumber" : (номер запроса)
+	"terminal": "1",
+	"queryNumber" : (номер запроса)
 }
 ```
 
 Пример ответа:
 ```json
 {
-    "terminal": "1",
-    "queryNumber": "0",
-    "archive": (здесь .zip-файл представленный base64 строкой)
+	"terminal": "1",
+	"queryNumber": "0",
+	"archive": (здесь .zip-файл представленный base64 строкой)
 }
 ```
 Пример отправки и декодирования на Python 3.6:
@@ -252,8 +252,8 @@ import base64
 url = "http://192.168.0.10/downloadcompressed"
 
 data = {
-    "terminal": "1",
-    "queryNumber": "0" 
+	"terminal": "1",
+	"queryNumber": "0" 
 }
 
 json_data = json.dumps(data)
@@ -268,7 +268,7 @@ print(response)
 decoded = base64.b64decode(response["archive"])
 
 with open("your_path_and_name_of_zip.zip", "wb") as f:
-    f.write(decoded)
+	f.write(decoded)
 
 print("done")
 ```
