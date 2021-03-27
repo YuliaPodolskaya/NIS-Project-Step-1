@@ -127,7 +127,7 @@ print(response)
  ```json
 {
 	"status" : "done",
-	"id" : (здесь номер запроса)
+	"id" : "(здесь номер запроса)"
 }
 ```
 
@@ -150,7 +150,7 @@ print(response)
 ```json
 {
 	"terminal" : "1"
-	"queryNumber" : (полученный номер запроса)
+	"queryNumber" : "(полученный номер запроса)"
 }
 ```
 
@@ -190,7 +190,7 @@ print(response)
 ```json
 {
 	"terminal": "1",
-	"queryNumber" : (номер запроса)
+	"queryNumber" : "(номер запроса)"
 }
 ```
 
@@ -199,7 +199,7 @@ print(response)
 {
 	"terminal": "1",
 	"queryNumber": "0",
-	"archive": (здесь .zip-файл представленный base64 строкой)
+	"archive": "(здесь .zip-файл представленный base64 строкой)"
 }
 ```
 Пример отправки и декодирования на Python 3.6:
@@ -243,7 +243,7 @@ print("done")
 ```json
 {
 	"terminal": "1",
-	"queryNumber" : (номер запроса)
+	"queryNumber" : "(номер запроса)"
 }
 ```
 
@@ -252,7 +252,7 @@ print("done")
 {
 	"terminal": "1",
 	"queryNumber": "0",
-	"archive": (здесь .zip-файл представленный base64 строкой)
+	"archive": "(здесь .zip-файл представленный base64 строкой)"
 }
 ```
 Пример отправки и декодирования на Python 3.6:
