@@ -210,7 +210,8 @@ print(response)
 }
 ```
 </br>
-Пример отправки и декодирования на Python 3.6:
+Пример отправки и декодирования на Python 3.6:  
+
 ```python
 import requests
 import json
@@ -239,6 +240,7 @@ with open("your_path_and_name_of_zip.zip", "wb") as f:
 
 print("done")
 ```
+
 </br>
 
 ## 5. Скачивание архива сжатых фотографий
